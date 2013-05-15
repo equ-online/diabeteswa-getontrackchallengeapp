@@ -1,0 +1,37 @@
+<div data-role="header">
+	<a href="#chat" class="back ui-btn-left"><div class="header-btn-container">Back</div></a>
+	<h1 id="title">Chat Details</h1>
+	<a href="#" class="ui-btn-right refresh-page"><div class="header-btn-container">Refresh</div></a>
+</div>
+<div data-role="content" class="chat-details"> 
+	<div class="chat-message">
+		<h3>Get on Track Challenge said:</h3>
+		<p>Hi and welcome to Get on Track Challenge. You can commence logging your time by clicking the circles in the timeline at the bottom of the page. Good luck!</p>
+		<p class="chat-date">03 May at 1:53pm</p>
+	</div>
+	
+	<% if(comments.length > 0) { %>
+	<div class="comments-box">
+		<h4><%= comments.length %> Comment(s)</h4>
+		<ul data-role="listview">
+		<% _.each(comments, function(comment) { console.log(comment)%>
+		<li>
+			<h3><%= comment.AuthorUsername %> said:</h3>
+			<p><%= comment.Comment %></p>
+			<p class="chat-date"><%= comment.FormattedDate %></p>
+		</li>
+		<% }); %>
+		</ul>
+	</div>
+	<% }; %>
+
+	<div class="btn-container btn-text-center">
+		<a data-role="button" class="post-comment-open" href="#popup-comment">Post Comment</a>
+	</div>
+	
+	<div data-role="popup" id="popup-comment" class="ui-content">
+	   <textarea cols="40" rows="8" id="comment-reply" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset" placeholder="Post a reply to the message"></textarea>
+		<a data-role="button" class="post-comment-reply" href="#popup-comment">Post Comment</a>
+	</div>
+	
+</div>

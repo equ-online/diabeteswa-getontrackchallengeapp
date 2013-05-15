@@ -1,0 +1,61 @@
+
+<div data-role="header">
+	<h1 id="title">Chat</h1>
+	<a href="#" class="ui-btn-right refresh-page"><div class="header-btn-container">Refresh</div></a>
+</div>
+<div data-role="content"> 
+	<h2>New Post</h2>
+	<div class="challenge-post-buttons clearfix">
+		<div class="btn-container btn-half btn-half-first">
+			<a data-role="button"  href="">Public Post</a>
+			<span class="btn-icon-right icon-public"></span>
+		</div>
+		<div class="btn-container btn-half">
+			<a data-role="button"  href="">Team Post</a>
+			<span class="btn-icon-right icon-team"></span>
+		</div>
+	</div>
+	<h2>Challenge Wall</h2>
+	<ul data-role="listview">
+		<% _.each(chatList, function(message) { 
+
+		var authorText = message.AuthorUsername + ' said';
+		var messageTypeIcon = 'message-type-message';
+		var messageLockClass = 'public';
+		switch(message.Type){
+			case 1:
+				authorText = 'Motivational Trigger';
+				messageTypeIcon = 'message-type-motivational';
+				messageLockClass = 'system';
+				break;
+
+			case 2:
+				messageLockClass = 'private';
+				break;
+
+			case 4:
+				authorText = 'Health Trigger';
+				messageTypeIcon = 'message-type-health';
+				messageLockClass = 'system';
+				break;
+
+			case 5:
+				authorText = 'Geographical Trigger';
+				messageTypeIcon = 'message-type-geographical';
+				messageLockClass = 'system';
+				break;
+		}
+		
+		%>
+		<li>
+			<a href="#chat-<%= message.MessageId%>" >
+				<h3 class="ui-li-heading"><%=authorText%>:</h3>
+				<p class="ui-li-desc"><%= message.Comment %></p>
+				<p class="chat-list-date ui-li-desc"><%- message.FormattedDate %><span class="chat-list-comment-count"><%- message.CommentCount %> comment(s)</span></p>
+				
+			</a>
+		
+		</li>
+		<% }); %>
+	</ul>
+</div>

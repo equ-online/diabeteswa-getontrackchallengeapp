@@ -1,0 +1,870 @@
+/* ==========================================================================
+   FONTS
+   ========================================================================== */
+
+@font-face {
+    font-family: 'populaire';
+    src: url('fonts/populaire-webfont.eot');
+    src: url('fonts/populaire-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/populaire-webfont.woff') format('woff'),
+         url('fonts/populaire-webfont.ttf') format('truetype'),
+         url('fonts/populaire-webfont.svg#populaireregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bebas';
+    src: url('fonts/bebasneue-webfont.eot');
+    src: url('fonts/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/bebasneue-webfont.woff') format('woff'),
+         url('fonts/bebasneue-webfont.ttf') format('truetype'),
+         url('fonts/bebasneue-webfont.svg#bebasneueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ==========================================================================
+   GENERAL
+   ========================================================================== */
+
+.ui-page.page-open
+{
+	display: block;
+}
+
+body
+{
+	border: none;
+	background: url(images/beige.jpg) left top repeat !important;
+}
+
+h2
+{
+	font-family: populaire, helvetica, arial, sans-serif;
+	font-size: 2.5em;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	border-bottom: 1px dashed #242424;
+}
+
+h3
+{
+	font-size: 1.0em;
+	margin-top: 5px;
+}
+
+h4
+{
+	font-family: bebas, helvetica, arial, sans-serif;
+	font-size: 1.1em;
+	margin-top: 0px;
+}
+
+.logo
+{
+	width: 173px;
+	height: 153px;
+	margin: 0 auto;
+	margin-top: 15px;
+	background: url(images/logo.png) left top no-repeat;
+}
+
+::-webkit-input-placeholder {
+	font-style: italic;
+   	color: #9f915d;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+	font-style: italic;
+   	color: #9f915d; 
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+	font-style: italic;
+   	color: #9f915d;
+}
+
+:-ms-input-placeholder {  
+	font-style: italic;
+   	color: #9f915d;  
+}
+
+.footer-logos
+{
+	width: 256px;
+	height: 118px;
+	margin: 0 auto;
+	margin-top: 30px;
+	background: url(images/logos.png) left top no-repeat;
+}
+
+.thumbs-up
+{
+	width: 132px;
+	height: 165px;
+	margin: 0 auto;
+	margin-top: 20px;
+	background: url(images/thumbs-up.png) left top no-repeat;
+}
+
+.center-para
+{
+	margin: 20px 10%;
+	text-align: center;
+}
+
+/* ==========================================================================
+   JQUERY MOBILE UI TWEAKS
+   ========================================================================== */
+.ui-page.show-page
+{
+	display: block;
+}
+   
+.ui-body-a
+{
+	border: none;
+	background: none;
+}
+
+div.ui-input-text
+{
+	padding: 0px;
+}
+
+div.ui-input-text input.ui-input-text
+{
+	padding: 10px;
+	margin: 15px 0px;
+	background: none;
+}
+
+div.ui-input-text:before
+{
+	top: 5px;
+	left: 5px;
+	content: " ";
+	display: block;
+	position: absolute;
+	bottom: -7px;
+	right: -7px;
+	z-index: -1;
+	padding: 10px;
+	background: url(images/beige-lighter.jpg) left top repeat;
+}
+
+div.ui-input-text:after
+{
+	content: " ";
+	border: 3px solid #242424;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: -1;
+}
+
+.btn-container
+{
+	position: relative;
+}
+
+.btn-container:before
+{
+	top: 5px;
+	left: 5px;
+	content: " ";
+	display: block;
+	position: absolute;
+	bottom: -7px;
+	right: -7px;
+	z-index: -1;
+	padding: 10px;
+	background: url(images/green.jpg) left top repeat;
+}
+
+.btn-container:after
+{
+	content: " ";
+	border: 3px solid #242424;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: -1;
+}
+
+.btn-container.btn-half
+{
+	width: 48%;
+	float: left;
+}
+
+.btn-container.btn-half.btn-half-first
+{
+	margin-right: 4%;
+}
+
+.btn-container.btn-half .ui-btn-inner
+{
+	padding: 5px 20px;
+}
+
+.ui-btn
+{
+	border: none;
+	background: none;
+}
+
+.ui-btn-inner
+{
+	font-family: bebas, helvetica, arial, sans-serif;
+	font-size: 20px;
+	text-align: left;
+}
+
+.btn-icon-right
+{
+	width: 23px;
+	height: 24px;
+	display: block;
+	position: absolute;
+	top: 12px;
+	right: 12px;
+}
+
+.btn-icon-right.icon-arrow
+{
+	background: url(images/arrow.png) left top no-repeat;
+}
+
+.btn-icon-right.icon-public
+{
+	background: url(images/public.png) left top no-repeat;
+}
+
+.btn-icon-right.icon-team
+{
+	background: url(images/team.png) left top no-repeat;
+}
+
+.ui-header
+{
+	padding: 8px;
+	border: none;
+	border-bottom: 3px solid #384625;
+	background: url(images/green-dark.jpg) left top repeat;
+}
+
+.ui-header h1.ui-title
+{
+	font-family: populaire, helvetica, arial, sans-serif;
+	font-size: 1.8em;
+	margin: 0px;
+	margin-top: 5px;
+}
+
+.ui-footer
+{
+	border: none;
+	border-top: 3px solid #242424;
+	background: url(images/blue.jpg) left top repeat;
+}
+
+.ui-footer .ui-btn-inner
+{
+	font-size: 1.0em;
+	text-align: center;
+}
+
+.ui-footer .ui-btn-inner .ui-btn-text
+{
+	font-size: 1.0em;
+	text-align: center;
+	top: 8px;
+	color: #013e4b;
+}
+
+.ui-block-a,
+.ui-block-b,
+.ui-block-c
+{
+	border-right: 3px solid #242424;
+}
+
+.ui-footer .ui-icon
+{
+	width: 28px;
+	height: 28px;
+	margin-left: -15px !important;
+	margin-top: 0px;
+	border-radius: 0px;
+	-webkit-border-radius: 0px;
+}
+
+.ui-footer .ui-icon.ui-icon-home-new
+{
+	background-image: url(images/icon-home-new.png);
+	background-position: top left;
+}
+
+.ui-footer .ui-icon-log
+{
+	background-image: url(images/icon-log.png);
+	background-position: top left;
+}
+
+.ui-footer .ui-icon-team
+{
+	background-image: url(images/icon-team.png);
+	background-position: top left;
+}
+
+.ui-footer .ui-icon-chat
+{
+	background-image: url(images/icon-chat.png);
+	background-position: top left;
+}
+
+/* ==========================================================================
+   HEADER BUTTONS
+   ========================================================================== */
+
+.ui-header .ui-btn .ui-btn-inner
+{
+	color: #000;
+	font-size: 1.0em;
+	border-top: none;
+	margin-right: 8px;
+	position: relative;
+}
+
+.ui-header .ui-btn .ui-btn-inner .ui-btn-text
+{
+	display: block !important;
+	padding: 5px 3px 2px 5px;
+	text-align: center;
+}
+
+.ui-header .ui-btn .ui-btn-inner .header-btn-container:before
+{
+	top: 5px;
+	left: 5px;
+	content: " ";
+	display: block;
+	position: absolute;
+	bottom: -7px;
+	right: -7px;
+	z-index: -1;
+	padding: 10px;
+	background: url(images/green.jpg) left top repeat;
+}
+
+.ui-header .ui-btn .ui-btn-inner .header-btn-container:after
+{
+	content: " ";
+	border: 3px solid #242424;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: -1;
+}
+
+.ui-bar-a .ui-shadow,
+.ui-shadow-inset
+{
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+/* ==========================================================================
+   LIST VIEWS
+   ========================================================================== */
+
+.ui-content .ui-listview
+{
+	width: 100%;
+	margin: 0px;
+}
+
+.ui-content .ui-listview .ui-btn
+{
+	position: relative;
+	margin-bottom: -4px;
+}
+
+.ui-content .ui-listview .ui-btn div.ui-btn-inner:before
+{
+	top: 5px;
+	left: 5px;
+	content: " ";
+	display: block;
+	position: absolute;
+	bottom: -7px;
+	right: -7px;
+	z-index: -1;
+	padding: 10px;
+	background: url(images/green.jpg) left top repeat;
+}
+
+.ui-content .ui-listview .ui-btn div.ui-btn-inner:after
+{
+	content: " ";
+	border: 3px solid #242424;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: -1;
+}
+
+/* ==========================================================================
+   LOGGING TIME
+   ========================================================================== */
+
+.ui-field-contain legend,
+.ui-field-contain label
+{
+	font-family: bebas, helvetica, arial, sans-serif;
+	font-size: 20px;
+}
+
+.ui-radio
+{
+	position: relative;
+}
+
+.ui-controlgroup-controls
+{
+	height: 70px;
+}
+
+.ui-controlgroup-controls input[type="radio"]
+{
+	display: none;
+}
+
+.ui-controlgroup-controls input[type="radio"] + label
+{
+	padding-top: 22px;
+	margin-right: 12px;
+	color: #ba8624;
+}
+
+.ui-controlgroup-controls input#radio-choice-1[type="radio"] + label,
+.ui-controlgroup-controls input#radio-choice-2[type="radio"] + label
+{
+	padding-left: 22px;
+}
+
+.ui-controlgroup-controls input#radio-choice-3[type="radio"] + label
+{
+	padding-left: 7px;
+}
+
+.ui-controlgroup-controls input[type="radio"] + label.ui-btn
+{
+	margin-right: 35px;
+}
+
+.ui-controlgroup-controls input[type="radio"] + label:after
+{
+	content: " ";
+	width: 65px;
+	height: 65px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background: url(images/intensity-unchecked.png) left top no-repeat;
+}
+
+.ui-controlgroup-controls input[type="radio"]:checked+label
+{
+	color: #000;
+}
+
+.ui-controlgroup-controls input[type="radio"]:checked+label:after
+{
+	background: url(images/intensity.png) left top no-repeat;
+}
+
+.ui-controlgroup-controls input[type="radio"] + label .ui-btn-inner
+{
+	padding: 0px;
+}
+
+.ui-controlgroup-controls input[type="radio"] + label .ui-btn-text
+{
+	font-size: 1.0em;
+}
+
+.ui-br
+{
+	border-bottom: 1px dashed #242424;
+}
+
+.ui-slider
+{
+	position: relative;
+}
+
+.ui-slider input.ui-input-text.ui-slider-input
+{
+	top: 5px;
+	left: 0px;
+	content: " ";
+	display: block;
+	position: absolute;
+	bottom: -7px;
+	right: -7px;
+	z-index: -1;
+	padding: 10px;
+	background: url(images/beige-lighter.jpg) left top repeat;
+	width: 25px;
+	height: 15px;
+}
+
+.ui-slider .ui-btn-down-a
+{
+	border: none;
+	background: #000;
+}
+
+.ui-slider .ui-slider-track
+{
+	height: 3px;
+	margin-top: 15px;
+}
+
+.ui-slider .ui-slider-track .ui-btn
+{
+	width: 34px;
+	height: 19px;
+	margin-top: -9px;
+	background: url(images/slider-btn.png) left top no-repeat;
+}
+
+.ui-field-contain div.ui-slider
+{
+	margin-bottom: 20px;
+}
+
+.ui-field-contain label.ui-slider
+{
+	margin-bottom: 0px;
+}
+
+.btn-text-center .ui-btn-inner
+{
+	text-align: center;
+}
+
+/* ==========================================================================
+   TEAM
+   ========================================================================== */
+
+.team-stats
+{
+	width: 100%;
+	padding-bottom: 15px;
+	border-bottom: 1px dashed #242424;
+}
+
+.team-stats .stat
+{
+	width: 50%;
+	float: left;
+}
+
+.team-stats .rank
+{
+	width: 30%;
+}
+
+.team-stats .distance
+{
+	text-align: right;
+	width: 70%;
+}
+
+.team-stats .rank-home
+{
+	text-align: right;
+}
+
+.team-stats .stat h3
+{
+	font-family: bebas, helvetica, arial, sans-serif;
+	font-size: 45px;
+	margin: 0px;
+}
+
+.team-stats .stat p
+{
+	margin: 0px;
+	font-size: 0.9em;
+}
+
+.team-ladder
+{
+	width: 100%;
+	font-size: 13px;
+	margin-top: 20px;
+}
+
+.team-ladder .member-name-label
+{
+	width: 60%;
+	display: inline-block;
+	font-family: bebas, helvetica, arial, sans-serif;
+	font-size: 1.5em;
+}
+
+.team-ladder .member-distance-label
+{
+	width: 40%;
+	text-align: right;
+	display: inline-block;
+	font-family: bebas, helvetica, arial, sans-serif;
+	font-size: 1.5em;
+}
+
+.team-ladder span.member-name
+{
+	width: 60%;
+	display: inline-block;
+}
+
+.team-ladder span.member-distance
+{
+	width: 40%;
+	text-align: right;
+	vertical-align: top;
+	display: inline-block;
+}
+
+/* ==========================================================================
+   CHAT
+   ========================================================================== */
+
+.challenge-post-buttons
+{
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.challenge-post-buttons .ui-btn-text
+{
+	font-size: 18px;
+}
+
+.ui-li-desc
+{
+	margin-top: 0;
+	font-family: helvetica, arial, sans-serif;
+}
+
+.ui-listview .ui-li-heading
+{
+	font-size: 19px;
+	margin-top: 0.3em;
+	margin-bottom: 0.1em;
+}
+
+.chat-list-date
+{
+	font-style: italic;
+	color: #587207;
+	margin-top: 4px;
+}
+
+.chat-list-comment-count
+{
+	margin-left: 10px;
+	padding-left: 10px;
+	border-left: 1px solid #242424;
+	color: #314005;
+	font-weight: 700;
+}
+
+.chat-details .chat-message
+{
+	border-bottom: 1px dashed #242424;
+	padding-bottom: 10px;
+	margin-bottom: 25px;
+}
+
+.chat-details .chat-date
+{
+	font-style: italic;
+	font-size: 12px;
+}
+
+.comments-box
+{
+	width: 90%;
+	padding: 5%;
+	margin-bottom: 20px;
+	font-size: 16px;
+	background: url(images/beige-lighter.jpg) left top repeat;
+}
+
+.comments-box .ui-listview .ui-btn-up-a
+{
+	padding: 0;
+	border: none;
+	border-bottom: 1px dashed #242424;
+	background: none;
+}
+
+.comments-box .ui-listview li
+{
+	margin-bottom: 20px;
+}
+
+.comments-box .ui-listview li:last-child
+{
+	border: none;
+	margin-bottom: 0px;
+}
+
+.comments-box .ui-listview h3
+{
+	font-size: 1.0em;
+	margin-bottom: 5px;
+}
+
+.comments-box .ui-listview p
+{
+	font-size: 16px;
+}
+
+.comments-box .ui-listview p.chat-date
+{
+	font-size: 12px;
+	margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   DISTANCE BAR
+   ========================================================================== */
+
+.distance-bar
+{
+	padding-bottom: 20px;
+	margin: 30px 0px;
+	border-bottom: 1px dashed #242424;
+}
+
+.distance-bar .bar
+{
+	height: 10px;
+	width: 94%;
+	margin: 0 3%;
+	background: url(images/beige-lighter.jpg) left top repeat;
+}
+
+.distance-bar .progress
+{
+	height: 10px;
+	width: 50%;
+	position: relative;
+	background: url(images/green-dark.jpg) left top repeat;
+}
+
+.distance-bar .progress:after
+{
+	content: " ";
+	width: 20px;
+	height: 40px;
+	position: absolute;
+	top: 50%;
+	right: -15px;
+	margin-top: -20px;
+	background: url(images/man-green.png) left top no-repeat;
+}
+
+.distance-bar p
+{
+	margin: 25px 3% 0px;
+	font-size: 12px;
+}
+
+/* ==========================================================================
+   NOT STARTED
+   ========================================================================== */
+
+.not-started h4
+{
+	margin: 20px 0px 10px;
+}
+
+.not-started p
+{
+	margin-top: 5px;
+}
+
+.challenge-start-date
+{
+	width: 100%;
+	height: 57px;
+	padding-left: 70px;
+	margin-bottom: 30px;
+	background: url(images/icon-calender.png) left top no-repeat;
+}
+
+.challenge-start-date p
+{
+	float: left;
+	width: 100%;
+	margin: 10px 0px 0px;
+}
+
+.challenge-start-date p.challenge-duration
+{
+	font-size: 12px;
+	margin-top: 5px;
+}
+
+/* ==========================================================================
+   NOT IN CHALLENGE
+   ========================================================================== */
+
+.not-in-challenge h4
+{
+	margin-top: 10px;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+
+

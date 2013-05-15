@@ -1,0 +1,53 @@
+<div data-role="header">
+		<a href="#log" class="back ui-btn-left"><div class="header-btn-container">Back</div></a>
+	<h1 id="title"><%= date.format('dddd MMMM Do') %></h1>
+</div>
+	<div data-role="content">
+		<form action="">
+			<div data-role="fieldcontain">
+				<fieldset data-role="controlgroup" data-type="horizontal">
+					<legend>Activity Intensity Level:</legend>
+					
+					<input type="radio" name="intensity" id="radio-choice-1" value="1" checked="checked" />
+					<label for="radio-choice-1">Low</label>
+							
+					<input type="radio" name="intensity" id="radio-choice-2" value="2" />
+					<label for="radio-choice-2">Med</label>
+							
+					<input type="radio" name="intensity" id="radio-choice-3" value="3" />
+					<label for="radio-choice-3">Vigorous</label>
+				</fieldset>
+			</div>
+					
+			<div data-role="fieldcontain">
+				<label for="hours">
+					Hours
+				</label>
+				<input id="hours" type="range" name="hours" value="0" min="0" max="24"	data-highlight="false">
+			</div>
+					
+			<div data-role="fieldcontain">
+				<label for="minutes">
+					Minutes
+				</label>
+				<input id="minutes" type="range" name="minutes" value="0" min="0" max="60" data-highlight="false">
+			</div>
+					
+			<div data-role="fieldcontain">
+				<label for="fruit">
+					Fruit
+				</label>
+				<input id="fruit" type="range" name="fruit" value="0" min="0" max="10" data-highlight="false">
+			</div>
+					
+			<div data-role="fieldcontain">
+				<label for="veg">
+					Veg
+				</label>
+				<input id="veg" type="range" name="veg" value="0" min="0" max="10" data-highlight="false">
+			</div>
+			<div class="btn-container btn-text-center">
+				<a data-role="button" class="log-time-btn" href="#log">Log Time</a>
+			</div>
+		</form>
+	</div>

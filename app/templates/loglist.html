@@ -1,0 +1,14 @@
+
+<div data-role="header">
+	<h1 id="title">Log Time</h1>
+	<a href="#" class="ui-btn-right refresh-page"><div class="header-btn-container">Refresh</div></a>
+</div>
+<div data-role="content"> 	
+	<h3>You haven't entered time for the following days. Click on a date below to log your time.</h3>
+	<ul data-role="listview">
+		
+		<% _.each(activityList, function(log) { %>
+			<li><a href="#log-<%= log.date%>" ><%= moment( log.date).format('dddd MMMM Do') %></a></li>
+		<% }); %>
+	</ul>
+</div>

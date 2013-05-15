@@ -1,0 +1,23 @@
+<div data-role="header">
+	<h1 id="title">My Team</h1>
+</div>
+<div data-role="content"> 	
+	<h2><%= team.name %></h2>
+	<div class="team-stats clearfix">
+		<div class="stat rank">
+			<h3><%= team.position %></h3>
+			<p>Team Posistion</p>
+		</div>
+		<div class="stat distance">
+			<h3>2100.14km<!-- <%= team.distance %> --></h3>
+			<p>Distance Travelled</p>
+		</div>
+	</div>
+
+	<div class="team-ladder">
+		<span class="label member-name-label">Team Ladder</span><span class="label member-distance-label">Distance</span>
+		<% _.each(team.rankings, function(member) { %>
+		<span class="member-name"><%= member.Name %></span><span class="member-distance"><%= member.TeamMemberDistance %>km</span>
+		<% }); %>
+	</div>
+</div>
