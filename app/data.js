@@ -1,5 +1,5 @@
 define("data", ['jquery'], function ($) {
-	var baseUrl = "http://localhost:58203/Base/Api/";
+	var baseUrl = "http://getontrackchallenge.staging.equ.com.au/Base/Api/";
 
 	var data = {};
 
