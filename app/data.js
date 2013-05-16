@@ -30,6 +30,8 @@ define("data", ['jquery'], function ($) {
 		}
 
 		var dfd = new jQuery.Deferred();
+		
+		$.mobile.showPageLoadingMsg();
 
 		$.ajax({
 			localCache: true,
@@ -40,12 +42,12 @@ define("data", ['jquery'], function ($) {
 			cache: false,
 			dataType: 'json',
 			success: function (reply) {
-
 				if (reply.Success == false) {
 					clearCache(cacheKey);
 					switch (reply.Data) {
 						case 'notloggedin':
 							clearAll();
+							window.location.hash = 'login';
 							break;
 					
 						case 'challengenotstarted':
@@ -62,6 +64,11 @@ define("data", ['jquery'], function ($) {
 		
 					dfd.resolve(reply.Data);
 				}
+				$.mobile.hidePageLoadingMsg();
+			},
+			error: function(){
+				clearAll();
+				window.location.hash = 'login';
 			}
 		});
 

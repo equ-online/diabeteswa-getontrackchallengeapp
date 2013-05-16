@@ -288,6 +288,10 @@ div.ui-input-text:after
 	color: #013e4b;
 }
 
+.ui-footer .ui-btn-active, .ui-footer .ui-btn:hover{
+	background: url(images/blue-lighter.jpg);
+}
+
 .ui-block-a,
 .ui-block-b,
 .ui-block-c
@@ -327,6 +331,10 @@ div.ui-input-text:after
 {
 	background-image: url(images/icon-chat.png);
 	background-position: top left;
+}
+
+.ui-popup-container{
+	background: url(images/beige-dark.jpg);
 }
 
 /* ==========================================================================

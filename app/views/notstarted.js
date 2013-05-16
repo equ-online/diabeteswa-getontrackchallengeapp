@@ -12,8 +12,14 @@ define([
 			var self = this;
 
 			$(self.el).data('no-footer', true);
-			$(self.el).html(self.template());
-			dfd.resolve(self);
+			
+			data.query('GetChallengeStartDate').done(function (challengeDetails) {
+				$(self.el).html(self.template({challengeDetails: challengeDetails}));
+				dfd.resolve(self);
+			});
+			
+			
+			
 			return dfd.promise();
 		}
 	});

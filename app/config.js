@@ -8,7 +8,8 @@ require.config({
 		jquerymobile : "../lib/jquery.mobile-1.3.0.min",
 		text : "../lib/text",
         moment : "../lib/moment.min",
-        jqueryajaxlocalstoragecache: "../lib/jquery-ajax-localstorage-cache"
+        jqueryajaxlocalstoragecache: "../lib/jquery-ajax-localstorage-cache",
+		domReady:'../lib/domReady'
 	},
 	shim: {
 		underscore: {

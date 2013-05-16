@@ -20,7 +20,7 @@ define([
 				
 				
 				$('.post-comment-open').on('vclick', function () {
-					$( "#popup-comment" ).popup( "open" )
+					$( '#popup-comment' ).popup( 'open' )
 					return false;
 				});
 				

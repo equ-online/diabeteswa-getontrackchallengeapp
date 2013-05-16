@@ -10,8 +10,8 @@ define([
 		template: _.template(tmpl),
 
 		render: function (eventName) {
-			var self = this;
 			var dfd = new jQuery.Deferred();
+			var self = this;
 
 			data.query('GetCurrentChallenge').done(function (challenge) {
 				$(self.el).html(self.template({ challenge: challenge }));

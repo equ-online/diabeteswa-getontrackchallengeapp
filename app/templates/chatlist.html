@@ -7,11 +7,11 @@
 	<h2>New Post</h2>
 	<div class="challenge-post-buttons clearfix">
 		<div class="btn-container btn-half btn-half-first">
-			<a data-role="button"  href="">Public Post</a>
+			<a data-role="button" href="" class="public-post-open">Public Post</a>
 			<span class="btn-icon-right icon-public"></span>
 		</div>
 		<div class="btn-container btn-half">
-			<a data-role="button"  href="">Team Post</a>
+			<a data-role="button" href="" class="team-post-open">Team Post</a>
 			<span class="btn-icon-right icon-team"></span>
 		</div>
 	</div>
@@ -58,4 +58,14 @@
 		</li>
 		<% }); %>
 	</ul>
+	
+	<div data-role="popup" id="popup-public-post" class="ui-content">
+		<textarea cols="40" rows="8" id="public-post" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset" placeholder="Post a message"></textarea>
+		<a data-role="button" class="post-public-post" href="#popup-comment">Post</a>
+	</div>
+	
+	<div data-role="popup" id="popup-team-post" class="ui-content">
+		<textarea cols="40" rows="8" id="team-post" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset" placeholder="Post a message"></textarea>
+		<a data-role="button" class="post-team-post" href="#popup-comment">Post</a>
+	</div>
 </div>

@@ -1,9 +1,10 @@
 define([
        'underscore',
        'backbone',
-	   'member',
+	   'data',
        'text!templates/login.html'
-], function (_, Backbone, member, tmpl) {
+], function (_, Backbone, data, tmpl) {
+
 	var LoginView = Backbone.View.extend({
 		template: _.template(tmpl),
 
@@ -28,7 +29,7 @@ define([
 			}
 			else
 			{
-				member.login($('#username').val(), $('#password').val()).done(function (data) {
+				data.query("Login", $('#username').val(), $('#password').val()).done(function (data) {
 			
 					if (data.length > 0) {
 						localStorage['accessToken'] = data;
