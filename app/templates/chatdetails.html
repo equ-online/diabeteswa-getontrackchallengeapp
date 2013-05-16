@@ -5,9 +5,9 @@
 </div>
 <div data-role="content" class="chat-details"> 
 	<div class="chat-message">
-		<h3>Get on Track Challenge said:</h3>
-		<p>Hi and welcome to Get on Track Challenge. You can commence logging your time by clicking the circles in the timeline at the bottom of the page. Good luck!</p>
-		<p class="chat-date">03 May at 1:53pm</p>
+		<h3><%= message.AuthorUsername %> said:</h3>
+		<p><%= message.Comment %></p>
+		<p class="chat-date"><%= message.FormattedDate %></p>
 	</div>
 	
 	<% if(comments.length > 0) { %>

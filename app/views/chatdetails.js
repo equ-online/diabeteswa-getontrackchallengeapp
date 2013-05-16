@@ -14,10 +14,8 @@ define([
 			var dfd = new jQuery.Deferred();
 			var self = this;
 
-			data.query('GetMessageDetails', this.options.messageId).done(function (comments) {
-				$(self.el).html(self.template({ comments: comments }));
-
-				
+			data.query('GetMessageDetails', this.options.messageId).done(function (data) {
+				$(self.el).html(self.template({ comments: data.comments, message: data.message }));
 				
 				$('.post-comment-open').on('vclick', function () {
 					$( '#popup-comment' ).popup( 'open' )

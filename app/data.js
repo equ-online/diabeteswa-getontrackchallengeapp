@@ -8,6 +8,13 @@ define("data", ['jquery'], function ($) {
 		localStorage.removeItem(method + 'cachettl');
 	}
 
+	function clearAllButLogin() {
+	alert(1);
+		var token = localStorage['accessToken'];
+		localStorage.clear();
+		localStorage['accessToken'] = token;
+	}
+	
 	function clearAll() {
 		localStorage.clear();
 		Backbone.history.fragment = null;
@@ -78,7 +85,8 @@ define("data", ['jquery'], function ($) {
 	return {
 		query: query,
 		clearCache: clearCache,
-		clearAll: clearAll
+		clearAll: clearAll,
+		clearAllButLogin: clearAllButLogin
 	};
 });
 

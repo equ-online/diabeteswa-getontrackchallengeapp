@@ -12,8 +12,9 @@ require([
 		'views/chatdetails',
 		'views/notstarted',
 		'views/notinchallenge',
+		'data',
 		'jquerymobile'
-	], function (domReady,$, _, Backbone, LoginView, HomeView, LogListView, LogAddView, TeamView, ChatView, ChatDetailsView, NotStartedView, NotInChallengeView) {
+	], function (domReady,$, _, Backbone, LoginView, HomeView, LogListView, LogAddView, TeamView, ChatView, ChatDetailsView, NotStartedView, NotInChallengeView, data) {
 		 domReady(function () {
 			function onDeviceReady(desktop) {
 				$.mobile.linkBindingEnabled = false;
@@ -32,6 +33,7 @@ require([
 					$('.current-page').removeClass('current-page');
 					page.addClass('current-page');
 					$('.refresh-page').click(function () {
+						data.clearAllButLogin();
 						Backbone.history.fragment = null;
 						Backbone.history.navigate(document.location.hash, true);
 						return false;
