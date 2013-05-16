@@ -9,7 +9,6 @@ define("data", ['jquery'], function ($) {
 	}
 
 	function clearAllButLogin() {
-	alert(1);
 		var token = localStorage['accessToken'];
 		localStorage.clear();
 		localStorage['accessToken'] = token;
