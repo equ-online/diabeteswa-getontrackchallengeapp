@@ -1,12 +1,13 @@
 <div data-role="header">
 	<h1>My Challenge</h1>
+    	<a href="#" class="ui-btn-right logout"><div class="header-btn-container">Logout</div></a>
 </div>
 
 <div data-role="content">
 	<h2><%= challenge.name %></h2>
 	<div class="team-stats clearfix">
-		<div class="stat">
-			<h3>Day <%= challenge.day %></h3>
+		<div class="stat day-home">
+			<h3>Day <%= challenge.day %> of <%= challenge.durationDays %></h3>
 			<p><%= challenge.todaysDate %></p>
 		</div>
 		<div class="stat rank-home">

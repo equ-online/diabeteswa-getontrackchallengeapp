@@ -337,6 +337,10 @@ div.ui-input-text:after
 	background: url(images/beige-dark.jpg);
 }
 
+.ui-popup-screen.in {
+    background:#000;
+}
+
 /* ==========================================================================
    HEADER BUTTONS
    ========================================================================== */
@@ -602,9 +606,15 @@ div.ui-input-text:after
 	width: 70%;
 }
 
+.team-stats .day-home
+{
+    width: 70%;
+}
+
 .team-stats .rank-home
 {
 	text-align: right;
+    width: 30%;
 }
 
 .team-stats .stat h3

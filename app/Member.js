@@ -7,7 +7,7 @@ define(['data'], function (data) {
 	};
 
 	member.login = function (username, password) {
-		return data.query("Login", username, password);
+		return data.query("Login", { login: username, password: password });
 	};
 
 	return member;

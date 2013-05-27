@@ -41,7 +41,7 @@ define([
 	return HomeView;
 	
 	function postGlobalMessage(messageId) {
-		data.query('PostGlobalMessage', $('#public-post').val()).done(function () {
+		data.query('PostGlobalMessage', {comment: $('#public-post').val()}).done(function () {
 			data.clearCache('GetChatList');
 			Backbone.history.fragment = null;
 			Backbone.history.navigate(document.location.hash, true);
@@ -49,7 +49,7 @@ define([
 	}
 	
 	function postTeamMessage(messageId) {
-		data.query('PostTeamMessage', $('#team-post').val()).done(function () {
+		data.query('PostTeamMessage', {comment: $('#team-post').val()}).done(function () {
 			data.clearCache('GetChatList');
 			Backbone.history.fragment = null;
 			Backbone.history.navigate(document.location.hash, true);

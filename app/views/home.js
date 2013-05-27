@@ -15,6 +15,10 @@ define([
 
 			data.query('GetCurrentChallenge').done(function (challenge) {
 				$(self.el).html(self.template({ challenge: challenge }));
+                $(self.el).find('.logout').click(function () {
+	                data.clearAll();
+	                return false;
+	            });
 				dfd.resolve(self);
 			});
 

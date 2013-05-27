@@ -15,7 +15,12 @@ define([
 			$(this.el).data('no-footer', true);
 			$(this.el).html(this.template());
 			setupEvent();
-			dfd.resolve(self);
+			$('.what-is-this').on('vclick', function () {
+				$( '#popup-not-registered' ).popup( 'open' )
+				return false;
+			});
+            
+            dfd.resolve(self);
 			return dfd.promise();
 		}
 	});
@@ -29,7 +34,7 @@ define([
 			}
 			else
 			{
-				data.query("Login", $('#username').val(), $('#password').val()).done(function (data) {
+				data.query("Login", {login: $('#username').val(), password: $('#password').val()}).done(function (data) {
 			
 					if (data.length > 0) {
 						localStorage['accessToken'] = data;

@@ -14,8 +14,10 @@ define([
 			var dfd = new jQuery.Deferred();
 			var self = this;
 
-			data.query('GetMessageDetails', this.options.messageId).done(function (data) {
-				$(self.el).html(self.template({ comments: data.comments, message: data.message }));
+			data.query('GetMessageDetails', {messageId: this.options.messageId}).done(function (data) {
+				$(self.el).html(self.template({message: data.message, comments: data.comments }));
+
+				
 				
 				$('.post-comment-open').on('vclick', function () {
 					$( '#popup-comment' ).popup( 'open' )
@@ -39,7 +41,7 @@ define([
 	return ChatDetailsView;
 
 	function postComment(messageId) {
-		data.query('PostComment', messageId, $('#comment-reply').val()).done(function () {
+		data.query('PostComment', {messageId: messageId, comment: $('#comment-reply').val()}).done(function () {
 			data.clearCache('GetMessageDetails' + messageId);
 			Backbone.history.fragment = null;
 			Backbone.history.navigate(document.location.hash, true);

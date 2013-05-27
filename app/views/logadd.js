@@ -40,8 +40,8 @@ define([
 		var hours = parseFloat($('#hours').val());
 		var intensity = parseFloat($('input[name=intensity]:checked').val());
 
-		var totalMinues = (hours * 60) + minutes
-		data.query('LogTime', intensity, totalMinues, fruitCount, vegCount, date).done(function () {
+		var totalMinutes = (hours * 60) + minutes
+		data.query('LogTime', {intensity: intensity, totalMinutes: totalMinutes, fruitCount: fruitCount, vegCount: vegCount, date: date}).done(function () {
 			data.clearCache('GetActivityToComplete');
 			window.location.hash = '#log';
 		});
