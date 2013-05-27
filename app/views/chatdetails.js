@@ -17,8 +17,6 @@ define([
 			data.query('GetMessageDetails', {messageId: this.options.messageId}).done(function (data) {
 				$(self.el).html(self.template({message: data.message, comments: data.comments }));
 
-				
-				
 				$('.post-comment-open').on('vclick', function () {
 					$( '#popup-comment' ).popup( 'open' )
 					return false;
@@ -42,7 +40,7 @@ define([
 
 	function postComment(messageId) {
 		data.query('PostComment', {messageId: messageId, comment: $('#comment-reply').val()}).done(function () {
-			data.clearCache('GetMessageDetails' + messageId);
+			data.clearCache('GetMessageDetails',{messageId: messageId});
 			Backbone.history.fragment = null;
 			Backbone.history.navigate(document.location.hash, true);
 		});

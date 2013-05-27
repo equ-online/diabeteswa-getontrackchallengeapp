@@ -14,7 +14,7 @@
 	<div class="comments-box">
 		<h4><%= comments.length %> Comment(s)</h4>
 		<ul data-role="listview">
-		<% _.each(comments, function(comment) { console.log(comment)%>
+		<% _.each(comments, function(comment) { %>
 		<li>
 			<h3><%= comment.AuthorUsername %> said:</h3>
 			<p><%= comment.Comment %></p>

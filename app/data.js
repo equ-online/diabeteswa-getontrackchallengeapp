@@ -4,9 +4,18 @@ define("data", ['jquery'], function ($) {
     var data = {};
 
     function clearCache(method) {
-        localStorage.removeItem(method);
-        localStorage.removeItem(method + 'cachettl');
+		var cacheKey = method;
+        if (arguments.length > 1) {
+            cacheKey += JSON.stringify(arguments[1]);
+        }
+		clearCacheByKey(cacheKey);
     }
+	
+	function clearCacheByKey(key) {
+        localStorage.removeItem(key);
+        localStorage.removeItem(key + 'cachettl');
+    }
+
 
 	function clearAllButLogin() {
 		var token = localStorage['accessToken'];
@@ -47,7 +56,7 @@ define("data", ['jquery'], function ($) {
             dataType: 'json',
             success: function (reply) {
                 if (reply.Success == false) {
-                    clearCache(cacheKey);
+                    clearCacheByKey(cacheKey);
                     switch (reply.Data) {
                         case 'notloggedin':
                             clearAll();
@@ -83,7 +92,8 @@ define("data", ['jquery'], function ($) {
     return {
         query: query,
         clearCache: clearCache,
-        clearAll: clearAll
+        clearAll: clearAll,
+		clearAllButLogin: clearAllButLogin
     };
 });
 
