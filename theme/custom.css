@@ -114,6 +114,13 @@ h4
 	text-align: center;
 }
 
+.what-is-this
+{
+	margin-top: 20px;
+	display: block;
+	text-decoration: underline;
+}
+
 /* ==========================================================================
    JQUERY MOBILE UI TWEAKS
    ========================================================================== */
