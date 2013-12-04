@@ -28,6 +28,7 @@ define([
 
 	function setupEvent() {
 		$('.login-btn').on('vclick', function (event) {
+			event.preventDefault();
 			if( $('#username').val().length == 0 || $('#password').val().length == 0 )
 			{
 				$('.error-message').html('Username and password is required.');
@@ -48,7 +49,6 @@ define([
 					$('.error-message').html('Error with username and password.');
 				});
 			}
-			return false;
 		});
 	}
 });
