@@ -13,6 +13,10 @@ define([
 
 			$(self.el).data('no-footer', true);
 			$(self.el).html(self.template());
+			$(self.el).find('.logout').click(function () {
+				data.clearAll();
+				return false;
+			});
 			dfd.resolve(self);
 
 			return dfd.promise();

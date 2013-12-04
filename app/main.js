@@ -18,6 +18,7 @@ require([
 	], function (domReady, $, _, Backbone, LoginView, HomeView, LogListView, LogAddView, TeamView, ChatView, ChatDetailsView, NotStartedView, NotInChallengeView, QuestionnaireNotCompletedView, data) {
 	    domReady(function () {
 	        function onDeviceReady(desktop) {
+				console.log("hello");
 	            $.mobile.linkBindingEnabled = false;
 	            $.mobile.hashListeningEnabled = false;
 	            $.mobile.defaultPageTransition = "none";
