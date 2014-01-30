@@ -33,9 +33,12 @@ require([
 
 	                $('.current-page').removeClass('current-page');
 	                page.addClass('current-page');
-	                $('.refresh-page').click(function () {
-						data.clearAllButLogin();
-	                    Backbone.history.fragment = null;
+	                $('.refresh-page').click(function (e) {
+	                    e.preventDefault();
+	                    data.clearAllButLogin();
+	         
+                        Backbone.history.fragment = null;
+	                    Backbone.history.loadUrl();
 	                    Backbone.history.navigate(document.location.hash, true);
 	                    return false;
 	                });
@@ -59,7 +62,7 @@ require([
 	                    "chat-:d": "chatdetails",
 	                    'challengenotstarted': 'notstarted',
 	                    'notinchallenge': 'notinchallenge',
-                        'questionnairenotcompleted': 'questionnairenotcompleted'
+	                    'questionnairenotcompleted': 'questionnairenotcompleted'
 	                },
 	                home: function () {
 	                    this.changePage(new HomeView(), 'home');
