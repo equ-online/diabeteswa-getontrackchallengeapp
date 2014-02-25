@@ -19,7 +19,10 @@ define([
 				$( '#popup-not-registered' ).popup( 'open' )
 				return false;
 			});
-            
+            $('.forgot-password-link').on('vclick', function () {
+	            var ref = window.open('http://www.getontrackchallenge.com.au/login/?msg=ForgotPassword', '_system');
+	            return false;
+	        });
             dfd.resolve(self);
 			return dfd.promise();
 		}
